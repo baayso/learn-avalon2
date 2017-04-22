@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <title>账户中心</title>
+
+    <link rel="stylesheet" href="../static/css/index.css">
+
+    <script>
+        if (!document.addEventListener) {
+            document.write('<script src="../libs/json3/json3.min.js"><\/script>');
+            document.write('<script src="../libs/es6-promise/es6-promise.min.js"><\/script>');
+        }
+    </script>
+    <script src="../libs/jquery/jquery.min.js"></script>
+    <script src="../libs/avalon2/avalon.js"></script>
+    <script src="../libs/avalon2/mmRouter.js"></script>
+</head>
+
+<body ms-controller="user" class="ms-controller">
+
+<script type="text/javascript">
+    //这里给后端提供数据接口
+    var conf = {
+        username: {"id": "11", "name": "^_^"}
+    }
+</script>
+
+<header>
+    <span>{{username.name}}你好，欢迎来到账户中心</span>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#!/index">我的首页</a></li>
+        <li><a href="#!/detail">账户详情</a></li>
+        <li><a href="#!/recharge">我要充值</a></li>
+        <li><a href='#!/ddd/111/222'>点我</a></li>
+    </ul>
+</nav>
+
+<article>{{@currPath}}</article>
+
+</body>
+
+<script src="../static/js/index.js"></script>
+
+</html>
