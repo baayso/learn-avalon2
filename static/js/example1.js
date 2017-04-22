@@ -14,8 +14,10 @@ avalon.router.add("/bbb", function (a) {
 avalon.router.add("/ccc", function (a) {
     vm.currPath = this.path
 })
-avalon.router.add("/ddd/:ddd/:eee", function (a) {//:ddd为参数
+avalon.router.add("/ddd/:ddd/:eee", function (a, b) {//:ddd为参数
     vm.currPath = this.path
+    console.log(a)
+    console.log(b)
 })
 
 avalon.history.start({
