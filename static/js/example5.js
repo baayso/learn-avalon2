@@ -4,6 +4,8 @@
 //var b = require('../tab2.html')
 //var c = require('../tab3.html')
 
+avalon.config({debug: false});
+
 var vm = avalon.define({
     $id: 'test',
     main: '',
@@ -33,6 +35,6 @@ avalon.history.start({
 })
 
 var hash = location.hash.replace(/#!?/, '')
-avalon.router.navigate(hash || '/aaa', 1)//默认打开
+avalon.router.navigate(hash || '/aaa', 2)//默认打开
 
 avalon.scan(document.body)

@@ -42,6 +42,6 @@ var hash = avalon.history.getPath()
 if (hash === '/exmaple6.html') {//比如一些网站没有, https://segmentfault.com/
     hash = '/aaa' 
 }
-avalon.router.navigate(hash, 1)//默认打开
+avalon.router.navigate(hash, 2)//默认打开
 
 avalon.scan(document.body)

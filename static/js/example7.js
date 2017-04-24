@@ -24,13 +24,12 @@ map.ccc = getHtml('../views/tab3.html');
 
 avalon.router.add("/pager-{count:\\d+}", function (count) {
     //返回新的hash用于设置地址栏
-    return '/aaa?pager-' + count 
+    return '/aaa?pager-' + count
 })
 
 avalon.router.add("/:tab", function (param) {
     vm.main = map[param]
 })
-
 
 
 avalon.history.start({
@@ -39,6 +38,6 @@ avalon.history.start({
 })
 
 var hash = location.hash.replace(/#!?/, '')
-avalon.router.navigate(hash || '/aaa', 1)//默认打开
+avalon.router.navigate(hash || '/aaa', 2)//默认打开
 
 avalon.scan(document.body)
