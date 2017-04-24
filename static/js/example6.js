@@ -18,29 +18,9 @@ var map = {
     'ccc': ''
 };
 
-$.ajax({
-    url: '../../views/tab1.html',
-    async: false,
-    success: function (data) {
-        map.aaa = data
-    }
-});
-
-$.ajax({
-    url: '../../views/tab2.html',
-    async: false,
-    success: function (data) {
-        map.bbb = data
-    }
-});
-
-$.ajax({
-    url: '../../views/tab3.html',
-    async: false,
-    success: function (data) {
-        map.ccc = data
-    }
-});
+map.aaa = getHtml('../views/tab1.html');
+map.bbb = getHtml('../views/tab2.html');
+map.ccc = getHtml('../views/tab3.html');
 
 avalon.router.add("/pager-{count:\\d+}", function(count){
     return '/aaa?pager-'+count
