@@ -14,19 +14,31 @@ var vm = avalon.define({
     ccc: "第三页的内容"
 })
 
-var map = {
-    'aaa': '',
-    'bbb': '',
-    'ccc': ''
-};
+// var map = {
+//     'aaa': '',
+//     'bbb': '',
+//     'ccc': ''
+// };
+//
+// map.aaa = getHtml('../views/tab1.html');
+// map.bbb = getHtml('../views/tab2.html');
+// map.ccc = getHtml('../views/tab3.html');
 
-map.aaa = getHtml('../views/tab1.html');
-map.bbb = getHtml('../views/tab2.html');
-map.ccc = getHtml('../views/tab3.html');
+avalon.router.add("/aaa", function (param) {
+    vm.main = getHtml('../views/tab1.html');
+});
 
-avalon.router.add("/:tab", function (param) {
-    vm.main = map[param]
-})
+avalon.router.add("/bbb", function (param) {
+    vm.main = getHtml('../views/tab2.html');
+});
+
+avalon.router.add("/ccc", function (param) {
+    vm.main = getHtml('../views/tab3.html');
+});
+
+// avalon.router.add("/:tab", function (param) {
+//     vm.main = map[param]
+// })
 
 
 avalon.history.start({
